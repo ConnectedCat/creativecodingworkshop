@@ -1,0 +1,22 @@
+///////////////////////////////////////////////////////////////////////////////
+// Circuit Playground Analog In - Serial Print
+//
+// Author: Carter Nelson
+// MIT License (https://opensource.org/licenses/MIT)
+
+#include <Adafruit_CircuitPlayground.h>
+
+uint16_t value;
+
+///////////////////////////////////////////////////////////////////////////////
+void setup() {
+  Serial.begin(9600);
+  CircuitPlayground.begin();
+}
+
+///////////////////////////////////////////////////////////////////////////////
+void loop() {
+  value = analogRead(3);
+  Serial.println(value);
+  delay(100);
+}
